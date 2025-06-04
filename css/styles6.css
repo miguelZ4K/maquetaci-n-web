@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* Utilidades */
+.container-fluid {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Navegador */
+.browser-bar {
+  background-color: #444;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.tab {
+  width: 60px;
+  height: 20px;
+  background-color: #777;
+}
+
+.address-bar {
+  flex: 1;
+  height: 16px;
+  background-color: #aaa;
+  border-radius: 3px;
+}
+
+/* Líneas */
+.line {
+  height: 10px;
+  background-color: #555;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.line.small {
+  width: 70%;
+}
+
+.line.active {
+  background-color: orange;
+}
+
+/* Sección principal */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Menú lateral */
+.menu {
+  flex: 1;
+  min-width: 120px;
+  background-color: #222;
+  padding: 10px;
+}
+
+/* Video central */
+.video-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-box {
+  background-color: #444;
+  height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+}
+
+.arrow.left {
+  border-right: 20px solid #aaa;
+  left: 10px;
+}
+
+.arrow.right {
+  border-left: 20px solid #aaa;
+  right: 10px;
+}
+
+/* Miniaturas */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+}
+
+.thumb-box {
+  flex: 1 1 calc(33.33% - 10px);
+  min-width: 100px;
+}
+
+.thumb {
+  background-color: orange;
+  height: 100px;
+  width: 180px;
+}
+
+/* Footer */
+.footer {
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsivo */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .menu {
+    flex: 1 1 100%;
+  }
+
+  .video-section {
+    flex: 1 1 100%;
+  }
+
+  .thumb-box {
+    flex: 1 1 50%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  .arrow {
+    display: none;
+  }
+
+  .thumb-box {
+    flex: 1 1 100%;
+  }
+}

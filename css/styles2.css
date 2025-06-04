@@ -1,0 +1,186 @@
+/* Reset y helpers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+/* Flexbox estilo bootstrap */
+.container-fluid {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Barra de navegador falsa */
+.browser-bar {
+  background-color: #555;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  width: 60px;
+  height: 20px;
+  background-color: #777;
+  margin: 2px 5px;
+}
+
+.address-bar {
+  flex: 1;
+  height: 16px;
+  background-color: #aaa;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* Header con imagen y texto */
+.header {
+  align-items: center;
+}
+
+.header-thumb {
+  width: 80px;
+  height: 80px;
+  background-color: orange;
+}
+
+.header-info .line {
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.line.long {
+  width: 200px;
+}
+
+.line.short {
+  width: 150px;
+}
+
+/* Contenido principal */
+.main-content {
+  justify-content: space-between;
+}
+
+/* Izquierda */
+.main-left {
+  flex: 2;
+  gap: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: 500px;
+  background-color: #1e1e1e;
+}
+
+.main-icons {
+  justify-content: space-between;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: #444;
+}
+
+/* Sidebar derecha */
+.sidebar {
+  flex: 1;
+}
+
+.side-card {
+  height: 60px;
+  border-radius: 4px;
+}
+
+.red {
+  background-color: #d50000;
+  height: 100px;
+  width: 100px;
+}
+
+.darkred {
+  background-color: #b71c1c;
+  height: 100px;
+  width: 100px;
+}
+
+.crimson {
+  background-color: #e53935;
+  height: 100px;
+  width: 100px;
+}
+
+.tomato {
+  background-color: #f4511e;
+  height: 100px;
+  width: 100px;
+}
+
+/* 🔁 RESPONSIVE */
+
+/* Tablet (≤992px) */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .side-card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Móvil (≤576px) */
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon {
+    flex: 1 1 30%;
+    margin: 5px 0;
+  }
+
+  .side-card {
+    width: 100%;
+  }
+
+  .sidebar {
+    flex-direction: column;
+  }
+}
